@@ -16,7 +16,6 @@ function TiendaPrincipal() {
 export default function App() {
   return (
     <div className="app">
-      <Encabezado />
       <Routes>
         <Route path="/" element={<TiendaPrincipal />} />
         <Route path="/carrito" element={<Carrito />} />
