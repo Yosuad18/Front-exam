@@ -95,6 +95,14 @@ p {
   margin: 0;
 }
 
+.producto-imagen {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
 code,
 .counter {
   font-family: var(--mono);
