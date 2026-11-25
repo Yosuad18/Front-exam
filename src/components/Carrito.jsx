@@ -5,13 +5,10 @@ import { useCarritoStore } from '../store/useCarritoStore'
 export default function Carrito() {
   const navigate = useNavigate()
   const items = useCarritoStore((state) => state.items)
+  const calcularTotal = useCarritoStore((state) => state.calcularTotal)
   const eliminarProducto = useCarritoStore((state) => state.eliminarProducto)
   const vaciarCarrito = useCarritoStore((state) => state.vaciarCarrito)
-
-  const total = items.reduce(
-    (suma, item) => suma + item.precio * item.cantidad,
-    0
-  )
+  const total = calcularTotal()
 
   if (items.length === 0) {
     return (

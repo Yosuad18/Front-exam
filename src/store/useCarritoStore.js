@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { productos as productosIniciales } from '../data/productos'
 
-export const useCarritoStore = create((set) => ({
+export const useCarritoStore = create((set, get) => ({
   productos: productosIniciales,
   items: [],
   // ERROR original: "Productos" con mayúscula creaba otra propiedad y no actualizaba state.productos.
@@ -21,4 +21,10 @@ export const useCarritoStore = create((set) => ({
       }
       return { items: [...state.items, { ...producto, cantidad: 1 }] }
     }),
+
+  calcularTotal: () =>
+    get().items.reduce(
+      (suma, item) => suma + item.precio * item.cantidad,
+      0
+    ),
 }))
