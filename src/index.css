@@ -54,6 +54,91 @@ body {
   margin: 0;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+  background: #f0fdf4;
+  border-bottom: 1px solid #bbf7d0;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.panel {
+  margin: 24px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+}
+
+.fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #dcfce7;
+}
+
+.fila-detalle,
+.vacio {
+  color: #166534;
+}
+
+.btn-primario,
+.btn-secundario {
+  border-radius: 8px;
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.btn-primario {
+  color: #fff;
+  background: #16a34a;
+  border: 1px solid #16a34a;
+}
+
+.btn-primario:hover {
+  background: #15803d;
+  border-color: #15803d;
+}
+
+.btn-secundario {
+  color: #166534;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+}
+
+.btn-secundario:hover {
+  background: #dcfce7;
+}
+
+.btn-primario:focus-visible,
+.btn-secundario:focus-visible {
+  outline: 3px solid #4ade80;
+  outline-offset: 2px;
+}
+
+.btn-bloque {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: #166534;
+}
+
 #root {
   width: 1126px;
   max-width: 100%;
